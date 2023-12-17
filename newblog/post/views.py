@@ -7,7 +7,7 @@ from rest_framework.response import Response
 
 def home(request):
     posts = Post.objects.all()
-    return render(request, 'index.html', {'posts': posts})
+    return render(request, 'home.html', {'posts': posts})
 
 
 class CreatePost(viewsets.ViewSet):
