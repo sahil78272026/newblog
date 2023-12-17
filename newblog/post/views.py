@@ -17,3 +17,7 @@ class CreatePost(viewsets.ViewSet):
         description = request.data.get('description')
         Post.objects.create(title=title, description=description)
         return Response("Post Created!")
+
+class About(viewsets.ViewSet):
+    def list(self, request):
+        return render(request, 'about.html')
