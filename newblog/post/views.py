@@ -12,8 +12,8 @@ def home(request):
 
 class CreatePost(viewsets.ViewSet):
 
-    def create(request):
-        title = requet.data.get('title')
+    def create(self, request):
+        title = request.data.get('title')
         description = request.data.get('description')
         Post.objects.create(title=title, description=description)
         return Response("Post Created!")

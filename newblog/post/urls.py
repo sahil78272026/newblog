@@ -3,6 +3,6 @@ from .views import *
 
 urlpatterns = [
     path('home', home),
-    path('create_post', CreatePost.as_view({'post':'create'})),
+    path('create_post/', CreatePost.as_view({'post':'create'})),
 
 ]
