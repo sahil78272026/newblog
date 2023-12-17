@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'post',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -75,10 +77,26 @@ WSGI_APPLICATION = 'newblog.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
+
+    # default sqlite3 db
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # },
+
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+       #2 default setting for db configured in railway.app
+
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': '-1g4Bb*DGGcCEdaF52f-6Ee5bFG-61eF',
+        'HOST': 'viaduct.proxy.rlwy.net',
+        'PORT': '56616',
+
     }
+
+
 }
 
 

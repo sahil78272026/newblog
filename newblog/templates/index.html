@@ -3,73 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Blog</title>
+  <title>Modern Blog</title>
   <style>
     body {
-      font-family: 'Arial', sans-serif;
+      font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
+      background-color: #f8f8f8;
+      color: #333;
     }
 
     header {
       background-color: #333;
       color: #fff;
-      padding: 10px;
+      padding: 20px;
       text-align: center;
     }
 
     main {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
-      background-color: #fff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin: 20px;
     }
 
     article {
-      margin-bottom: 20px;
+      width: 300px;
+      margin: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    article:hover {
+      transform: scale(1.05);
     }
 
     h2 {
       color: #333;
+      margin: 10px;
     }
 
     p {
       color: #666;
+      margin: 10px;
     }
 
     footer {
       text-align: center;
-      padding: 10px;
+      padding: 20px;
       background-color: #333;
       color: #fff;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Simple Blog</h1>
+    <h1>Modern Blog</h1>
   </header>
 
   <main>
+  {% for post in posts %}
     <article>
-      <h2>Blog Post Title 1</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <h2>{{post.title}}</h2>
+      <p>{{post.description}}</p>
     </article>
+  {% endfor %}
 
-    <article>
-      <h2>Blog Post Title 2</h2>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </article>
+    <!-- Add more articles as needed -->
+
   </main>
 
   <footer>
-    &copy; 2023 Simple Blog
+    &copy; 2023 Modern Blog
   </footer>
 
 </body>
