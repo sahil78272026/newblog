@@ -79,24 +79,34 @@ WSGI_APPLICATION = 'newblog.wsgi.application'
 DATABASES = {
 
     # default sqlite3 db
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # },
-
     'default': {
-       #2 default setting for db configured in railway.app
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    },
 
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': '-1g4Bb*DGGcCEdaF52f-6Ee5bFG-61eF',
-        'HOST': 'viaduct.proxy.rlwy.net',
-        'PORT': '56616',
+    # 'default': {
+    #    #2 default setting for db configured in railway.app
 
-    }
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'railway',
+    #     'USER': 'postgres',
+    #     'PASSWORD': '-1g4Bb*DGGcCEdaF52f-6Ee5bFG-61eF',
+    #     'HOST': 'viaduct.proxy.rlwy.net',
+    #     'PORT': '56616',
 
+    # }
 
+    # 'default': {
+    #    #3 default setting for db configured in awsrds in sahilazure23 account
+
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'awsdb',
+    #     'USER': 'postgres',
+    #     'PASSWORD': 'ZAQ!zaq1',
+    #     'HOST': 'awsdb.cz20aw8omnwh.ap-south-1.rds.amazonaws.com',
+    #     'PORT': '5432',
+
+    # }
 }
 
 

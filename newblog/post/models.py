@@ -8,3 +8,10 @@ class Post(models.Model):
     class Meta:
         db_table = "Post"
 
+class NewsLetter(models.Model):
+    id = models.BigAutoField(primary_key=True)
+    email = models.EmailField(null=True, blank=True)
+    email_sent = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True, null=True, blank=True)
+
